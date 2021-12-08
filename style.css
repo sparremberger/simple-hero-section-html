@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Roboto Mono";
+    font-size: 18px; /* Usar valor base no HTML. Assim pode usar REM em todo o resto, e pra ajustar o tamanho de tudo, basta mudar aqui. */
+}
+
+#hero {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("./background.jpg") no-repeat center / cover;
+    color: white;
+
+    /* Same as:
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    Note: The forward slash is required syntax for separating background position values and background size values.
+    This is to eliminate misinterpretation of the values specified. If you're going to specify both,
+    then background-position has to come first, then the forward slash, then the background-size.
+    */
+}
+
+.container {
+    width: 90%;
+    height: 100%;
+    max-width: 1000px;
+    /* O container vai ser sempre 90% do tamanho do pai, até o limite de 1200px. */
+    margin: 0 auto; /* Top e bottom = 0, left e right = auto. */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container .info h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.container .info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.container .info p {
+    font-size: 1.2rem;
+    max-width: 70%;
+    margin: 0 auto; /* Alinha no centro */
+    /* margin-right: 0; Caso quisesse alinhar à direita */
+}
+
+.container .info a {
+    text-decoration: none;
+    display: inline-block;
+    background-color: white;
+    border-radius: 4px;
+    font-size: 1.8rem;
+    padding: 0.5em 2em; /* Rem: root element (html), em: parent element */
+    margin-top: 2rem;
+    color: #ee6c09;
+}
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 10px; /* Olha que beleza pra trocar o tamanho da fonte de todos os elementos. */
+    }
+}
